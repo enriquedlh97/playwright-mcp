@@ -1,4 +1,5 @@
 ## Playwright MCP
+[![smithery badge](https://smithery.ai/badge/@enriquedlh97/playwright-mcp)](https://smithery.ai/server/@enriquedlh97/playwright-mcp)
 
 A Model Context Protocol (MCP) server that provides browser automation capabilities using [Playwright](https://playwright.dev). This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models.
 
@@ -51,6 +52,14 @@ claude mcp add playwright npx @playwright/mcp@latest
 
 <details>
 <summary>Claude Desktop</summary>
+
+### Installing via Smithery
+
+To install playwright-mcp automatically via [Smithery](https://smithery.ai/server/@enriquedlh97/playwright-mcp):
+
+```bash
+npx -y @smithery/cli install @enriquedlh97/playwright-mcp
+```
 
 Follow the MCP install [guide](https://modelcontextprotocol.io/quickstart/user), use the standard config above.
 
