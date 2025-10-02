@@ -1,5 +1,6 @@
 ## Playwright MCP
 
+[![smithery badge](https://smithery.ai/badge/@enriquedlh97/playwright-mcp)](https://smithery.ai/server/@enriquedlh97/playwright-mcp)
 A Model Context Protocol (MCP) server that provides browser automation capabilities using [Playwright](https://playwright.dev). This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models.
 
 ### Key Features
@@ -55,6 +56,7 @@ claude mcp add playwright npx @playwright/mcp@latest
 Follow the MCP install [guide](https://modelcontextprotocol.io/quickstart/user), use the standard config above.
 
 </details>
+
 
 <details>
 <summary>Codex</summary>
@@ -171,7 +173,6 @@ After installation, the Playwright MCP server will be available for use with you
 Follow Windsurf MCP [documentation](https://docs.windsurf.com/windsurf/cascade/mcp). Use the standard config above.
 
 </details>
-
 ### Configuration
 
 Playwright MCP server supports following arguments. They can be provided in the JSON configuration above, as a part of the `"args"` list:
