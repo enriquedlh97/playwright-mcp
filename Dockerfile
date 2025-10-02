@@ -59,8 +59,9 @@ RUN chown -R ${USERNAME}:${USERNAME} node_modules
 USER ${USERNAME}
 
 COPY --from=browser --chown=${USERNAME}:${USERNAME} ${PLAYWRIGHT_BROWSERS_PATH} ${PLAYWRIGHT_BROWSERS_PATH}
-COPY --chown=${USERNAME}:${USERNAME} cli.js package.json ./
+COPY --chown=${USERNAME}:${USERNAME} cli.js package.json smithery-config.json ./
 
 # Run in headless mode with HTTP transport on the PORT environment variable
 # Smithery will set PORT=8081, and we'll use that for the HTTP server
-ENTRYPOINT ["sh", "-c", "node cli.js --headless --browser chromium --no-sandbox --port ${PORT:-8081}"]
+# Bind to 0.0.0.0 to allow external connections (required for Smithery)
+ENTRYPOINT ["sh", "-c", "node cli.js --headless --browser chromium --no-sandbox --port ${PORT:-8081} --host 0.0.0.0"]
